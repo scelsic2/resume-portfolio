@@ -48,9 +48,24 @@ main {
     padding: 20px
 }
 
-h1, h2 {
+h2 {
     color: var(--accent-color);
     margin-bottom: 10px;
+}
+
+.name-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.me {
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 5px;
 }
 
 #aboutme {
@@ -92,6 +107,7 @@ h1, h2 {
 
 .project-div > a > img {
     max-width: 350px;
+    border-radius: 10px;
 }
 
 .project-description-div {

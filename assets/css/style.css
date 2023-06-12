@@ -11,8 +11,11 @@
     font-family: sans-serif;
 }
 
-body {
-    background-color: var(--secondary-color)
+html {
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    /* overflow: hidden; */
 }
 
 .sidenav {
@@ -46,32 +49,81 @@ main {
     padding: 20px
 }
 
-h2 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
+.box1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1 {
+    margin-bottom: 5px;
+    font-size: 50px;
+    text-shadow: 2px 2px var(--primary-color);
+}
+
+.fswd {
+    margin-top: 5px;
 }
 
 .name-div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: start;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-bottom: 10px;
+    height: fit-content;
 }
 
 .me {
-    height: 50px;
-    margin-left: 10px;
+    height: 200px;
     border-radius: 5px;
+    margin-top: 30px;
+}
+
+
+
+.hide-me {
+    display: none;
+}
+
+.projects-btn {
+    border: none;
+    padding: 10px 50px;
+    margin-top: 10px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    color: var(--primary-color);
+    box-shadow: 5px 5px var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name-div > a {
+    text-decoration: none;
+}
+
+.projects-btn:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    box-shadow: none;
 }
 
 #aboutme {
     color: var(--accent-color);
-    background-color: var(--primary-color);
+    background-color: rgba(35, 41, 70, .8);
     margin: 20px 0px 20px 0px;
     padding: 20px;
     border-radius: 10px;
+    width: 500px;
+    height: fit-content;
+    font-size:large;
+    font-weight:600
 }
 
 #aboutme a {
@@ -85,11 +137,30 @@ h2 {
     margin-top: 20px;
 }
 
+.projects-title {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .projects-container {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    background-color: rgba(184, 193, 236, .8);
+    /* max-width: min-content; */
+    width: 60%;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 150px;
+    border-radius: 5px;
+}
+
+.projects-wrap {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .project-link {
@@ -140,6 +211,22 @@ h2 {
     background-color: var(--accent-color);
 }
 
+@media screen and (max-width: 375px) {
+    main {
+        padding-top: 0px;
+    }
+    .box1 {
+        height: 100%;
+    }
+    .fswd {
+        margin: 10px;
+    }
+    .projects-container {
+        width: 90%;
+        margin-bottom: 0;
+    }
+}
+
 @media screen and (max-width: 540px) {
     .sidenav {
         padding-top: 15px;
@@ -147,8 +234,9 @@ h2 {
     }
     .sidenav a {font-size: 18px;}
     .projects-container {
-        max-width: 90%;
+        width: 90%;
         align-items: center;
+        margin-top: 100px;
     }
     .project-div {
         max-width: 90%;
@@ -163,6 +251,7 @@ h2 {
     .project-description-div {
         margin-left: 0;
         margin-top: 5px;
+        max-width: 90%;
     }
     .technology-div {
         display: flex;
@@ -172,10 +261,39 @@ h2 {
     .technology {
         margin-right: 20px;
     }
+    .box1 {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+    #aboutme {
+        width: 90%;
+    }
+    h1 {
+        margin: 10px;
+        font-size: xx-large;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .box1 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .projects-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .projects-wrap {
+        width: 100%;
+    }
+    .project-div {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1400px) {
-    .name-div {
+    /* .name-div {
         max-width: 1000px;
         margin: auto;
     }
@@ -183,5 +301,16 @@ h2 {
     #aboutme {
         max-width: 1000px;
         margin: auto;
+    } */
+
+    .box1 {
+        display: flex;
+        justify-content: center;
+    }
+    #aboutme {
+        margin-right: 100px;
+    }
+    .name-div {
+        margin-left: 100px;
     }
 }

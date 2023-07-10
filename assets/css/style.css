@@ -152,7 +152,7 @@ h1 {
     width: 60%;
     padding: 20px;
     margin: auto;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     border-radius: 5px;
 }
 
@@ -161,6 +161,10 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.project-div {
+    max-width: fit-content;
 }
 
 .project-link {
@@ -211,6 +215,39 @@ h1 {
     background-color: var(--accent-color);
 }
 
+.contact-me-wrapper {
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: var(--accent-color);
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.contact-me-h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-me > a {
+    text-decoration: none;
+    display: block;
+    color: var(--accent-color);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contact-me > a > .icon {
+    font-size: 25px;
+}
+
 @media screen and (max-width: 375px) {
     main {
         padding-top: 0px;
@@ -224,6 +261,22 @@ h1 {
     .projects-container {
         width: 90%;
         margin-bottom: 0;
+    }
+    .box1 {
+        /* margin-top: 100px; */
+    }
+    h1, .fswd {
+        text-align: center;
+    }
+    .contact-me-wrapper {
+        width: 90%;
+    }
+    .contact-me {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-me > a {
+        margin-bottom: 20px;
     }
 }
 
@@ -264,7 +317,7 @@ h1 {
     .box1 {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 50px;
+        margin-top: 100px;
     }
     #aboutme {
         width: 90%;
@@ -272,6 +325,19 @@ h1 {
     h1 {
         margin: 10px;
         font-size: xx-large;
+    }
+    h1, .fswd {
+        text-align: center;
+    }
+    .contact-me-wrapper {
+        width: 90%;
+    }
+    .contact-me {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-me > a {
+        margin-bottom: 20px;
     }
 }
 
@@ -285,9 +351,6 @@ h1 {
         margin-bottom: 20px;
     }
     .projects-wrap {
-        width: 100%;
-    }
-    .project-div {
         width: 100%;
     }
 }

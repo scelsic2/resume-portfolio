@@ -297,6 +297,9 @@ h1 {
         width: 80%;
         margin-bottom: 0;
     }
+    .project-link {
+        padding: 0;
+    }
     h1, .fswd {
         text-align: center;
     }

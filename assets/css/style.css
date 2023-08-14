@@ -287,7 +287,8 @@ h1 {
         padding-top: 0px;
     }
     .box1 {
-        height: 100%;
+        height: 100lvh;
+        height: 100svh;
         justify-content: flex-end;
     }
     .fswd {

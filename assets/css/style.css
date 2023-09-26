@@ -249,6 +249,10 @@ h1 {
     margin: auto;
 }
 
+hr {
+    width: 100%;
+}
+
 .contact-me-wrapper {
     background-color: var(--primary-color);
     padding: 20px;
